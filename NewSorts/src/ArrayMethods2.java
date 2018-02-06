@@ -9,18 +9,32 @@ public class ArrayMethods2//Donovan Guo
 		{
 			int x = 0;//index for list1 
 			int y = 0; //index for list2
-			if(list1[x].compareTo(list2[y]) > 0)
-				{
-				Combined[i]= list2[y];//sets index i of "Combined" to the value of list2[y]
-				y++;// move an index forward 
-				}
-			if(list1[x].compareTo(list2[y]) < 0)
+			if ((y < list2.length) && (x < list1.length))// prevents out of index comparison
 			{
-				Combined[i]= list1[x];//vice versa of the above
-				x++;// moves list1 an index forward
+				if(list1[x].compareTo(list2[y]) >= 0)
+					{
+					Combined[i]= list2[y];//sets index i of "Combined" to the value of list2[y]
+					y++;// move an index forward 
+					}
+				if(list1[x].compareTo(list2[y]) < 0)
+				{
+					Combined[i]= list1[x];//vice versa of the above
+					x++;// moves list1 an index forward
+				}
+				else
+				{
+					if(y = list2.length )
+					{
+						while 
+					}
+				}
 			}
 		}
 		return Combined;
+	}
+	public static int partition(int[] list)
+	{
+		
 	}
 
 }
