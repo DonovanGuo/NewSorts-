@@ -21,12 +21,21 @@ public class ArrayMethods2//Donovan Guo
 					Combined[i]= list1[x];//vice versa of the above
 					x++;// moves list1 an index forward
 				}
-				else
+				else // adds the rest of the other unfinished array to the end of the combination array 
 				{
-					if(y = list2.length )
+					while(x < list1.length) // Incase list2 has been finished 
 					{
-						while 
+						Combined[i] = list1[x];
+						i++;
+						x++;
 					}
+					while( y < list2.length)// Incase list2 has been finished 
+					{
+						Combined[i] = list2[y];
+						i++;
+						y++;
+					}
+						
 				}
 			}
 		}
