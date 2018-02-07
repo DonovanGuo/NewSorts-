@@ -1,7 +1,7 @@
 
 public class ArrayMethods2//Donovan Guo
 {
-	public static String[]merge(String[]list1,String[]list2) //Pre-condition both lists are sorted in alphabetical order already.
+	public static String[] merge(String[]list1,String[]list2) //Pre-condition both lists are sorted in alphabetical order already.
 	{
 	
 		String[]Combined = new String[list1.length + list2.length];//runs the code for the entire duration of the new string 
@@ -41,9 +41,9 @@ public class ArrayMethods2//Donovan Guo
 		}
 		return Combined;
 	}
-	public static int partition(int[] list)
-	{
-		
-	}
+	//public static int partition(int[]list)
+	//{
+		//return 0;
+	//}
 
 }
