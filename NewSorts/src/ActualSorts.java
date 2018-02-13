@@ -19,5 +19,6 @@ public class ActualSorts
 			int rightl = x/2;
 			int leftl = x/2;
 		}
-		
+		String[] left = new String[0,leftl];
+	}
 }
