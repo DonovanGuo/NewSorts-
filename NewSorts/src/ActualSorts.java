@@ -12,13 +12,17 @@ public class ActualSorts
 		{
 			int rightl = (x+1)/2;
 			int leftl = list1.length - (x+1)/2;
-			
+			String[] left = Arrays.copyOfRange(list1,0,leftl);
+			String[] right = Arrays.copyOfRange(list1,leftl,rightl);
 		}
 		else if ((x % 2)==0)
 		{
 			int rightl = x/2;
 			int leftl = x/2;
+			String[] left = Arrays.copyOfRange(list1,0,leftl);
+			String[] right = Arrays.copyOfRange(list1,leftl,rightl);
 		}
-		String[] left = new String[0,leftl];
+		
 	}
+
 }
