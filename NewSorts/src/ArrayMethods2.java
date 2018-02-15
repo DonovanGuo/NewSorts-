@@ -49,8 +49,21 @@ public class ArrayMethods2//Donovan Guo
 		int checkdex = 0;
 		while(checkdex != pivotdex)
 		{
-			
+			for(checkdex = 0;list[checkdex]< list.length;checkdex++)
+			{
+				if ( list[pivotdex] > list[checkdex])
+				{
+					int lesser = list[checkdex];
+					swapInt(list,list[lesser],list[checkdex]);
+				}
+			}
 		}
+	}
+	public static void swapInt ( int[]arr, int mama, int mio )
+	{
+		int store = arr[mama];
+		arr[mama]= arr[mio];
+		store = arr[mio];
 	}
 
 }
