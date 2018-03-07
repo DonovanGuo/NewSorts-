@@ -1,6 +1,14 @@
 
 public class ArrayMethods2//Donovan Guo
 {
+	public static void swapInt ( int[]arr, int mama, int mio )
+	{
+		int store = arr[mama];
+		arr[mama]= arr[mio];
+		store = arr[mio];
+	}
+
+
 	public static String[] merge(String[]list1,String[]list2) //Pre-condition both lists are sorted in alphabetical order already.
 	{
 		int x = 0;//index for list1 
@@ -45,15 +53,47 @@ public class ArrayMethods2//Donovan Guo
 	
 	public static int partition(int[]list)
 	{
-		int pivotdex = 0;
-		int checkdex = 0;
-		
-	}
-	public static void swapInt ( int[]arr, int mama, int mio )
-	{
-		int store = arr[mama];
-		arr[mama]= arr[mio];
-		store = arr[mio];
-	}
+			int pivotval = list[0];
+			int pivdex = 0; 
+			int i = list.length - 1;
+			while (i != pivdex)
+			{
+				while (pivdex < i)
+				{	
+					if (list[i] >= pivotval)
+					{
 
+						i--;
+
+					}
+					else if (list[i] < pivotval)
+					{
+						swapInt(list,pivdex,i);
+						int subpos = i;
+						i = pivdex;
+						pivdex = subpos;
+						i++;
+					}
+				}
+				
+				while (pivdex > i)
+				{
+					if (list[i] <= pivotval)
+					{
+						i++;
+					}
+					
+					else if (list[i] > pivotval)
+					{
+						swapInt(list,pivdex,i);
+						int subpos = i;
+						i = pivdex;
+						pivdex = subpos;
+						i--;
+					}
+				}
+			}
+			return pivdex;
+		}
 }
+
